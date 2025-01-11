@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container{
+            text-align: center;
+            width: 450px;
+            padding: 40px;
+        }
+
+        h1{
+            margin-bottom: 10px;
+        }
+
+        p:first-of-type{
+            color: #939393;
+            margin-bottom: 20px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        label{
+            display: block;
+            text-align: left;
+            margin: 10px 0px 5px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        input{
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        button{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            margin-top: 10px;
+            background-color: #000;
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .fa {
+            margin-right: 5px;
+            font-size: 20px;
+        }
+
+        .divider{
+            border-bottom: 1px solid #b3afaf;
+            line-height: 1px;
+            width: 100%;
+
+        }
+
+        .or-divider{
+            background-color: #fff;
+            padding: 0px 10px;
+            color: #939393;
+        }
+        .google-login{
+            background-color: #fff;
+            border: 1px solid #ddd;
+            color: #000;
+            margin: 20px 0px;
+            font-weight: bold;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        p a{
+            border-bottom: 1px solid black;
+            
+        }
+
+        input:focus{
+            caret-color: red;
+        }
+
+    </style>
+
+</head>
+<body>
+        
+    <div class="container">
+        <h1>Welcome back <span>👋🏻</span>
+        </h1>
+        <p>Welcome back! Let's make this chapter of your learning adventure a remarkable success! Happy learning!"</p>
+        <form action="">
+            <label for="email-login">Email</label>
+            <input type="email" name="email" id="email-login" placeholder="Enter your email">
+
+            <label for="password-login">Password</label>
+            <input type="password" name="password" id="password-login" placeholder="Enter your password">
+
+            <button type="submit" id="login-btn">Log in</button>
+        </form>
+
+        <div class="divider">
+            <span class="or-divider">OR</span>
+        </div>
+
+        <button type="button" class="google-login" id="google-login"><i class="fa fa-google" aria-hidden="true"></i>
+            <a href="#">Log in with google</a></button>
+        <p>Don't have an account? <a href="sign-up-form.html"> Sign up for free</a></p>
+        <button id="logout-btn" style="background-color: tomato; width: 100px;">
+            logout
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="config.js"></script>
+    <script type="module" src="authlogin.js"></script>
+</body>
+</html>

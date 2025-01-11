@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container{
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+            width: 450px;
+        }
+
+        h1{
+            margin-bottom: 10px;
+        }
+
+        p:first-of-type{
+            color: #939393;
+            margin-bottom: 20px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        label{
+            display: block;
+            text-align: left;
+            margin: 10px 0px 5px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        input{
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button{
+            width: 100%;
+            padding: 10px;
+            background-color: #1b1b1b;
+            color: #fff;
+            border: none;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 20px 0px;
+        }
+
+        button.google-signup{
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+            font-weight: bold;
+            margin: 20px 0px;
+        }
+
+        .fa {
+            margin-right: 5px;
+            font-size: 20px;
+        }
+
+        .divider{
+            border-bottom: 1px solid #b3afaf;
+            line-height: 1px;
+            width: 100%;
+
+        }
+
+        .or-divider{
+            background-color: #fff;
+            padding: 0px 10px;
+            color: #939393;
+        }
+
+
+        a{
+            color: #000;
+            text-decoration: none;
+        }
+        p a{
+            color: #000;
+            text-decoration: none;
+            border-bottom: 1px solid #000;
+            font-weight: bold;
+        }
+
+        /* p:last-of-type{
+            margin-top: 0px;
+        } */
+        input:focus{
+            caret-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Join for success <span>✨</span></h1>
+        <p>Are you ready to take the next step towards a successful future? Look no further than Circlez!</p>
+        <form action="">
+            <label for="fullname">Full name</label>
+            <input type="text" name="fullname" id="fullname" placeholder="Enter your name">
+            
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email">
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Enter your password">
+
+            <button type="button" id="signup-btn">Sign up</button>
+        </form>
+    
+        <div class="divider">
+            <span class="or-divider">OR</span>
+        </div>
+
+    <button type="button" class="google-signup" id="google-signup"><i class="fa fa-google" aria-hidden="true"></i><a href="#">Sign up with Google</a></button>
+    <p>Already have an account? <a href="login-form.html">Log in</a></p>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="config.js"></script>
+    <script type="module" src="auth.js"></script>
+</body>
+</html>
