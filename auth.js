@@ -45,7 +45,7 @@ async function signupWithGoogle() {
    try {
     const { user, session, error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
-        redirectTo: 'http://localhost:3000/login-form.html'
+        redirectTo: 'http://127.0.0.1:5500/welcome.html'
       })
       if (error) throw error;
 

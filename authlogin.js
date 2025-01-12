@@ -25,7 +25,10 @@ async function login(e) {
               });
           }
 
-         location.href = 'https://www.google.com'
+          setTimeout(() => {
+            location.assign = 'http://127.0.0.1:5500/welcome.html'
+            
+          }, 5000);
             
           return data
     } catch (error) {
