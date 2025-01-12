@@ -26,7 +26,7 @@ async function login(e) {
           }
 
           setTimeout(() => {
-            location.assign = 'http://127.0.0.1:5500/welcome.html'
+            location.href = 'http://127.0.0.1:5500/welcome.html'
             
           }, 5000);
             
